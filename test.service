@@ -1,0 +1,13 @@
+[Unit]
+Description=Simple bash script on startup
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/test.sh
+Restart=on-failure
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
